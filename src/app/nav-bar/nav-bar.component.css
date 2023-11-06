@@ -1,0 +1,16 @@
+@font-face {
+    font-family: my_font;
+    src: url(/assets/Dancing_Script/DancingScript-VariableFont_wght.ttf);
+}
+
+.navbar {
+    font-family: my_font;
+    font-size: 18pt;
+}.dropdown-menu{
+    font-size: 18pt;
+}.form-control{
+    font-size: 18pt;
+}.search{
+    width: 15%;
+}
+
