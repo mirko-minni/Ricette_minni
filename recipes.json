@@ -1,0 +1,88 @@
+[
+    {
+      "name": "Spaghetti alla chitarra",
+      "description": "Tipico abruzzese",
+      "imagePath": "https://images.lacucinaitaliana.it/wp-content/uploads/2017/02/Maccheroni-alla-chitarra.jpg",
+      "ingredients": [
+        {
+          "name": "Semola di grano duro",
+          "amount": "50g"
+        },
+        {
+          "name": "Uova",
+          "amount": "2"
+        },
+        {
+          "name": "Acqua",
+          "amount": "50ml"
+        }
+      ],
+      "difficulty": "Semplice",
+      "time_executing": "30 min.",
+      "instructions" : "Per prima cosa create su un piano di lavoro la forma a fontana con la farina e rompetevi all'interno le uova aggiustando poi di sale, spolverandone giusto un pizzico. Con una forchetta sbattete le uova e continuate a impastare fino a ottenere un impasto liscio e omogeneo, formate quindi un panetto che avvolgerete nella pellicola trasparente e lascerete riposare per un'ora circa. Trascorso questo periodo di tempo trasferite nuovamente l'impasto sul piano di lavoro e con un mattarello stendete la pasta realizzando una sfoglia di circa 5 mm. Utilizzando la chitarra, ossia lo strumento utilizzato per dare il classico formato agli spaghetti, procedete a realizzarli disponendoli poi su una spianatoia per lasciarli asciugare. Dopo alcuni minuti di riposo gli spaghetti alla chitarra sono pronti per essere cucinati e quindi conditi con il sugo preferito: sbizzarritevi attingendo al vasto repertorio della tradizione."
+    },
+    {
+      "name": "Lasagne alla bolognese",
+      "description": "Nel cuore dell'Emilia-Romagna",
+      "imagePath": "https://www.cucinare.it/uploads/wp-content/uploads/2015/05/pasta_alla_bolognese.webp",
+      "ingredients": [
+        {
+          "name": "Pasta sfoglia",
+          "amount": "5 strati"
+        },
+        {
+          "name": "Ragù",
+          "amount": "60g"
+        },
+        {
+          "name": "Besciamella",
+          "amount": "40g"
+        }
+      ],
+      "difficulty": "Media",
+      "time_executing": "30 min.",
+      "instructions" : ""
+    },
+    {
+      "name": "Gnocchi ai formaggi",
+      "description": "Nei borghi del Castelmagno",
+      "imagePath": "https://images.fidhouse.com/fidelitynews/wp-content/uploads/sites/6/2017/05/1495792337_13c855513b63705bb079c377ed01563d4eb12ccc-223759579.jpg?w=580",
+      "ingredients": [
+        {
+          "name": "Gnocchi",
+          "amount": "80g"
+        },
+        {
+          "name": "Castelmagno",
+          "amount": "30g"
+        },
+        {
+          "name": "Latte",
+          "amount": "20ml"
+        },
+        {
+          "name": "Burro",
+          "amount": "20g"
+        }
+      ],
+      "difficulty": "Semplice",
+      "time_executing": "25 min.",
+      "instructions" : "Per gli gnocchi al Castelmagno, come prima cosa, assicuratevi di avere gnocchi di patate di buona qualità oppure preparateli seguendo la ricetta base. In una capiente padella antiaderente raccogliete il latte in cui avrete stemperato l'amido di mais, il Castelmagno a scaglie molto sottili e il burro. Fate fondere a fiamma molto bassa mescolando spesso. Nel frattempo portate a ebollizione abbondante acqua salata in una casseruola capiente. Lessatevi gli gnocchi scolandoli con una schiumarola non appena saranno venuti a galla e uniteli al condimento preparato. Mantecate con Castelmagno grattugiato a piacere, aggiustate la consistenza con eventuale acqua di cottura, salate e pepate. Trasferite gli gnocchi al Castelmagno nei piatti da portata e servite."
+   
+    },
+    {
+      "name": "Tiramisu",
+      "description": "Un dessert gustoso",
+      "imagePath": "https://blog.giallozafferano.it/acasadimaria/wp-content/uploads/2019/06/tiramisu-sav.png",
+      "ingredients": [
+        {
+          "name": "Apples",
+          "amount": 8
+        },
+        {
+          "name": "Tomatoes",
+          "amount": 13
+        }
+      ]
+    }
+]
