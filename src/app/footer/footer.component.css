@@ -1,0 +1,9 @@
+@font-face {
+    font-family: my_font;
+    src: url(/assets/Dancing_Script/DancingScript-VariableFont_wght.ttf);
+}
+
+*{
+    font-family: my_font;
+    font-size: 20pt;
+}

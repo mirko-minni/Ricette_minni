@@ -5,11 +5,14 @@
 
 .navbar {
     font-family: my_font;
-    font-size: 18pt;
+    font-size: 20pt;
+    height: 5%;
+    line-height: normal;
+    position: relative;
 }.dropdown-menu{
-    font-size: 18pt;
+    font-size: 17pt;
 }.form-control{
-    font-size: 18pt;
+    font-size: 17pt;
 }.search{
     width: 15%;
 }

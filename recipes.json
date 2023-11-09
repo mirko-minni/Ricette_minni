@@ -2,6 +2,7 @@
     {
       "name": "Spaghetti alla chitarra",
       "description": "Tipico abruzzese",
+      "tipologia": "Pasta",
       "imagePath": "https://images.lacucinaitaliana.it/wp-content/uploads/2017/02/Maccheroni-alla-chitarra.jpg",
       "ingredients": [
         {
@@ -24,6 +25,7 @@
     {
       "name": "Lasagne alla bolognese",
       "description": "Nel cuore dell'Emilia-Romagna",
+      "tipologia": "Pasta",
       "imagePath": "https://www.cucinare.it/uploads/wp-content/uploads/2015/05/pasta_alla_bolognese.webp",
       "ingredients": [
         {
@@ -41,11 +43,12 @@
       ],
       "difficulty": "Media",
       "time_executing": "30 min.",
-      "instructions" : ""
+      "instructions" : "Stendere la pasta nella teglia, passare con "
     },
     {
       "name": "Gnocchi ai formaggi",
       "description": "Nei borghi del Castelmagno",
+      "tipologia" : "Pasta",
       "imagePath": "https://images.fidhouse.com/fidelitynews/wp-content/uploads/sites/6/2017/05/1495792337_13c855513b63705bb079c377ed01563d4eb12ccc-223759579.jpg?w=580",
       "ingredients": [
         {
@@ -73,6 +76,7 @@
     {
       "name": "Tiramisu",
       "description": "Un dessert gustoso",
+      "tipologia" : "Dessert",
       "imagePath": "https://blog.giallozafferano.it/acasadimaria/wp-content/uploads/2019/06/tiramisu-sav.png",
       "ingredients": [
         {
