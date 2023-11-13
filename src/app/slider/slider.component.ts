@@ -10,4 +10,5 @@ export class SliderComponent {
   img2: string = "././assets/img/gnocchi_castelmagno.jpg";
   img3: string = "././assets/img/flipped_lasagna.jpg";
   img4: string = "././assets/img/tiramisu.jpg";
+  img5: string = "././assets/img/Brutti-ma-buoni.jpg";
 }

@@ -14,3 +14,11 @@ h3{
 .card{
     align-self: center;
 }
+
+.dolci{
+    flex-direction: row;
+}
+
+img{
+    height: 40vh;
+}
