@@ -3,7 +3,7 @@
     {
       "name": "Spaghetti alla chitarra",
       "description": "Tipico abruzzese",
-      "tipologia": "Pasta",
+      "tipologia": "Salato",
       "imagePath": "././assets/img/spaghetti_chitarra.jpg",
       "ingredients": [
         {
@@ -26,7 +26,7 @@
     {
       "name": "Lasagne alla bolognese",
       "description": "Nel cuore dell'Emilia-Romagna",
-      "tipologia": "Pasta",
+      "tipologia": "Salato",
       "imagePath": "././assets/img/flipped_lasagna.jpg",
       "ingredients": [
         {
@@ -44,12 +44,12 @@
       ],
       "difficulty": "Media",
       "time_executing": "30 min.",
-      "instructions" : "Stendere la pasta nella teglia, passare con "
+      "instructions" : "Preparare strati alternati di pasta sfoglia, ragù e besciamella in una teglia. Cuocere in forno a 180°C per 45-60 minuti, assicurandosi che la superficie sia dorata. Lasciare raffreddare leggermente prima di servire. Godere delle deliziose lasagne alla bolognese fatte in casa."
     },
     {
       "name": "Gnocchi ai formaggi",
       "description": "Nei borghi del Castelmagno",
-      "tipologia" : "Pasta",
+      "tipologia" : "Salato",
       "imagePath": "././assets/img/gnocchi_castelmagno.jpg",
       "ingredients": [
         {

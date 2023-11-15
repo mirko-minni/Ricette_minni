@@ -3,6 +3,14 @@
     src: url(/assets/Dancing_Script/DancingScript-VariableFont_wght.ttf);
 }
 
+*{
+    justify-content: center;
+}
+
+body{
+    overflow: hidden;
+}
+
 h3{
     margin-top: 5%;
     text-align: center;
@@ -21,4 +29,15 @@ h3{
 
 img{
     height: 40vh;
+}
+
+.card-title{
+    font-family: my_font;
+    font-style: italic;
+    font-size: 24pt;
+    font-weight: bold;
+}.card-text{
+    font-family: my_font;
+    font-style: oblique;
+    font-size: 18pt;
 }

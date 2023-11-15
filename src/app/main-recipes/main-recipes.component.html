@@ -1,7 +1,8 @@
-<h3 id="dolci">Dolci</h3>
+
+<h3 id="dolci" style="margin-bottom: 5%;">Dolci</h3>
 <div class="dolci row">
   <div class="row">
-    <div *ngFor="let item of ricetteDolci" class="card mx-auto col-md-4 mb-3">
+    <div *ngFor="let item of ricetteDolci; let i = index" class="card mx-auto col-md-4 mb-3">
       <img src="{{item.imagePath}}" class="card-img img-fluid" alt="...">
       <div class="card-body">
         <h5 class="card-title">{{item.name}}</h5>
@@ -11,12 +12,12 @@
         <div class="accordion accordion-flush">
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                Clicca qui per le istruzioni
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#flush-collapse-' + i" aria-expanded="false" [attr.aria-controls]="'flush-collapse-' + i">
+                Clicca qui per gli ingredienti
               </button>
             </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body" *ngFor="let ingredient of item.ingredients">{{ingredient}}</div>
+            <div [attr.id]="'flush-collapse-' + i" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body" *ngFor="let ingredient of item.ingredients">{{ingredient.name}} - {{ingredient.amount}}</div>
             </div>
           </div>
         </div>
@@ -25,12 +26,54 @@
         <div class="accordion accordion-flush">
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#flush-collapse-' + i + '-instructions'" aria-expanded="false" [attr.aria-controls]="'flush-collapse-' + i + '-instructions'">
                 Clicca qui per le istruzioni
               </button>
             </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+            <div [attr.id]="'flush-collapse-' + i + '-instructions'" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">{{item.instructions}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Salati -->
+<h3 id="salati" style="margin-bottom: 5%;">Salati</h3>
+<div class="ralati row">
+  <div class="row">
+    <div *ngFor="let item of ricetteSalati; let i = index" class="card mx-auto col-md-4 mb-3">
+      <img src="{{item.imagePath}}" class="card-img img-fluid" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{item.name}}</h5>
+        <p class="card-text">{{item.description}}</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <div class="accordion accordion-flush">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#flush-collapse-' + (i + ricetteDolci.length)" aria-expanded="false" [attr.aria-controls]="'flush-collapse-' + (i + ricetteDolci.length)">
+                Clicca qui per gli ingredienti
+              </button>
+            </h2>
+            <div [attr.id]="'flush-collapse-' + (i + ricetteDolci.length)" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body" *ngFor="let ingredient of item.ingredients">{{ingredient.name}} - {{ingredient.amount}}</div>
+            </div>
+          </div>
+        </div>
+      </ul>
+      <div class="card-body">
+        <div class="accordion accordion-flush">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#flush-collapse-' + (i + ricetteDolci.length) + '-instructions'" aria-expanded="false" [attr.aria-controls]="'flush-collapse-' + (i + ricetteDolci.length) + '-instructions'">
+                Clicca qui per le istruzioni
+              </button>
+            </h2>
+            <div [attr.id]="'flush-collapse-' + (i + ricetteDolci.length) + '-instructions'" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">{{item.instructions}}</div>
             </div>
           </div>
         </div>

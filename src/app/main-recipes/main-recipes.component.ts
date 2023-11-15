@@ -9,23 +9,24 @@ import { Ingredient } from '../models/receipe';
 })
 export class MainRecipesComponent {
   ricetteDolci: Recipe[] = [];
+  ricetteSalati: Recipe[] = [];
   constructor(){
 
     const json: any = [];
 
-    this.loadRicette();
-
+    this.loadRicette("Dessert", this.ricetteDolci);
+    this.loadRicette("Salato", this.ricetteSalati)
   }
 
-  async loadRicette(){
-    const request = await fetch('http://localhost:3000/db');
+  async loadRicette(tipologia: string, ricette: any){
+    const request = await fetch('http://localhost:5000/db');
     const db: any = (await request.json()).db;
     
     for (const item of db) {
-      if(item.tipologia === "Dessert"){
-        this.ricetteDolci.push(item);
+      if(item.tipologia === tipologia){
+        ricette.push(item);
       }
     }
-    console.log(this.ricetteDolci);
+    console.log(ricette);
   }
 }
