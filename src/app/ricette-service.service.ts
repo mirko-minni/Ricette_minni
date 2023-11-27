@@ -10,4 +10,20 @@ export class RicetteServiceService {
   setVisible(value: boolean){
     this.visible = value;
   }
+
+  getAll(){
+
+  }
+
+  getFromQuery(query: string){
+
+  }
+
+  post(element: any){
+
+  }
+
+  put(element: any){
+    
+  }
 }
