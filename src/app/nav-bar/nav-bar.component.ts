@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { RicetteServiceService } from '../ricette-service.service';
 
 
 @Component({
@@ -8,4 +10,12 @@ import { Component } from '@angular/core';
 })
 export class NavBarComponent {
 
+  constructor(private ricetteService : RicetteServiceService){}
+  query: string = '';
+  showElements : any = true;
+  
+  cercaRicetta() {
+    this.showElements = this.ricetteService.setVisible(false);
+    console.log('Valore dell\'input:', this.query);
+  }
 }

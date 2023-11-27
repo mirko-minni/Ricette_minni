@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
+import { RicetteServiceService } from '../ricette-service.service';
 
 @Component({
   selector: 'app-slider',
@@ -11,4 +12,6 @@ export class SliderComponent {
   img3: string = "././assets/img/flipped_lasagna.jpg";
   img4: string = "././assets/img/tiramisu.jpg";
   img5: string = "././assets/img/Brutti-ma-buoni.jpg";
+
+  
 }
