@@ -1,0 +1,48 @@
+<div *ngIf="ricette.length > 0" >
+    <h3 id="dolci" style="margin-bottom: 5%;">Ricerca</h3>
+<div class="dolci row">
+  <div class="row">
+    <div *ngFor="let item of ricette; let i = index" class="card mx-auto col-md-4 mb-3">
+      <img src="{{item.imagePath}}" class="card-img img-fluid" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{item.name}}</h5>
+        <p class="card-text">{{item.description}}</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <div class="accordion accordion-flush">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#flush-collapse-' + i" aria-expanded="false" [attr.aria-controls]="'flush-collapse-' + i">
+                Clicca qui per gli ingredienti
+              </button>
+            </h2>
+            <div [attr.id]="'flush-collapse-' + i" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="PB-range-slider-div">
+                <input type="range" min="1" max="10" value="{{people}}" step="0.2" class="PB-range-slider" id="myRange" (change)="peopleChange($event)" [ngModel]="rangeValue">
+                <p class="PB-range-slidervalue">{{people}} Pers.</p>
+                </div>
+              
+              <div class="accordion-body" *ngFor="let ingredient of item.ingredients">{{ingredient.name}} - {{printAmount((ingredient.amount).toString())}}</div>
+            </div>
+          </div>
+        </div>
+      </ul>
+      <div class="card-body">
+        <div class="accordion accordion-flush">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#flush-collapse-' + i + '-instructions'" aria-expanded="false" [attr.aria-controls]="'flush-collapse-' + i + '-instructions'">
+                Clicca qui per le istruzioni
+              </button>
+            </h2>
+            <div [attr.id]="'flush-collapse-' + i + '-instructions'" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">{{item.instructions}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>

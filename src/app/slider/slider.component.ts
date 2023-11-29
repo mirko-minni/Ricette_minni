@@ -1,5 +1,4 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { RicetteServiceService } from '../ricette-service.service';
 
 @Component({
   selector: 'app-slider',

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RicetteServiceService } from '../ricette-service.service';
-
+import { Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-nav-bar',
@@ -10,12 +9,30 @@ import { RicetteServiceService } from '../ricette-service.service';
 })
 export class NavBarComponent {
 
-  constructor(private ricetteService : RicetteServiceService){}
+  constructor(){}
   query: string = '';
-  showElements : any = true;
+  ricette : any[] = [];
+  @Output() filterChange = new EventEmitter <any>()
   
-  cercaRicetta() {
-    this.showElements = this.ricetteService.setVisible(false);
-    console.log('Valore dell\'input:', this.query);
+  ngOnInit(){
+    this.caricaRicette()
+  }
+
+  async caricaRicette(): Promise<void> {
+    const request = await fetch('http://localhost:3000/recipes');
+    this.ricette = await request.json();
+  }
+
+  getFilteredRicette(): any[] {
+    const term = this.query.toLowerCase();
+    let ricettario = this.ricette;
+    ricettario = ricettario.filter(ricetta =>
+      ricetta.name.toLowerCase().indexOf(term) !== -1 ||
+      ricetta.ingredients.some((ingrediente: any) =>
+        ingrediente.name.toLowerCase().includes(term)
+      )
+    );
+    this.filterChange.emit({event:event, ricettarioFiltrato: ricettario});
+    return ricettario;
   }
 }

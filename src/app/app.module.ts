@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MainRecipesComponent } from './main-recipes/main-recipes.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ListaRicetteComponent } from './lista-ricette/lista-ricette.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { CommonModule } from '@angular/common';
     SliderComponent,
     FooterComponent,
     MainRecipesComponent,
+    ListaRicetteComponent,
   ],
   imports: [
     BrowserModule,

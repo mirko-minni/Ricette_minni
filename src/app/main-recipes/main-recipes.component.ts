@@ -10,6 +10,8 @@ import { Ingredient } from '../models/receipe';
 export class MainRecipesComponent {
   ricetteDolci: Recipe[] = [];
   ricetteSalati: Recipe[] = [];
+  people = 1;
+  rangeValue: number = 0;
   constructor(){
 
     const json: any = [];
@@ -36,5 +38,15 @@ export class MainRecipesComponent {
     } catch (error) {
       console.error('Errore durante il recupero delle ricette:', error);
     }
+  }
+
+  peopleChange(event: Event){
+    const value = (event.target as HTMLInputElement).value;
+    this.people = parseInt(value);
+  }
+
+  printAmount(amount: string){
+    const [amountValue, amountUnit] = amount.split(/(\d+)/).filter(Boolean);
+    return (parseInt(amountValue) * this.people) + amountUnit;
   }
 }

@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Ricette_minni';
+  ricetteFiltrate : any[] = [];
+  showFiltered($event: any){
+    console.log($event.ricettarioFiltrato);
+    this.ricetteFiltrate = $event.ricettarioFiltrato;
+  }
 }

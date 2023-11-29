@@ -1,4 +1,5 @@
-<app-nav-bar></app-nav-bar>
+<app-nav-bar (filterChange)="showFiltered($event)"></app-nav-bar>
+<app-lista-ricette [ricette]="ricetteFiltrate"></app-lista-ricette>
 <app-slider></app-slider>
 <app-main-recipes></app-main-recipes>
 <app-footer></app-footer>
