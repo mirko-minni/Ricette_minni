@@ -7,7 +7,7 @@
       <div class="card-body">
         <h5 class="card-title">{{item.name}}</h5>
         <p class="card-text">{{item.description}}</p>
-        <button type="button" class="btn btn-outline-primary" (click)="deleteItem(item.name)">Elimina</button>
+        <button type="button" class="btn btn-outline-success">Elimina</button>
       </div>
       <ul class="list-group list-group-flush">
         <div class="accordion accordion-flush">
@@ -19,7 +19,7 @@
             </h2>
             <div [attr.id]="'flush-collapse-' + i" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
               <div class="PB-range-slider-div">
-                <input type="range" min="1" max="10" value="{{people}}" step="0.2" class="PB-range-slider" id="myRange" (change)="peopleChange($event)" [ngModel]="rangeValue">
+                <input type="range" min="1" max="10" value="{{people}}" step="0.2" class="PB-range-slider" id="myRange" (change)="peopleChange($event)" >
                 <p class="PB-range-slidervalue">{{people}} Pers.</p>
               </div>
               
@@ -55,7 +55,7 @@
       <div class="card-body">
         <h5 class="card-title">{{item.name}}</h5>
         <p class="card-text">{{item.description}}</p>
-        <button type="button" class="btn btn-outline-primary" (click)="deleteItem(item.name)">Elimina</button>
+        <button type="button" class="btn btn-outline-success">Elimina</button>
       </div>
       <ul class="list-group list-group-flush">
         <div class="accordion accordion-flush">
@@ -67,7 +67,7 @@
             </h2>
             <div [attr.id]="'flush-collapse-' + (i + ricetteDolci.length)" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
               <div class="PB-range-slider-div">
-                <input type="range" min="1" max="10" value="{{people}}" step="0.2" class="PB-range-slider" id="myRange" (change)="peopleChange($event)" [ngModel]="rangeValue">
+                <input type="range" min="1" max="10" value="{{people}}" step="0.2" class="PB-range-slider" id="myRange" (change)="peopleChange($event)">
                 <p class="PB-range-slidervalue">{{people}} Pers.</p>
                 </div>
               
