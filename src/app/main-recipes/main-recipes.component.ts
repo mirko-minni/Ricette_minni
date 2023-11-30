@@ -12,6 +12,7 @@ export class MainRecipesComponent {
   ricetteSalati: Recipe[] = [];
   people = 1;
   rangeValue: number = 0;
+  REST_API : string = 'http://localhost:3000/recipes';
   constructor(){
 
     const json: any = [];
@@ -22,7 +23,7 @@ export class MainRecipesComponent {
 
   async loadRicette(tipologia: string, ricette: any) {
     try {
-      const request = await fetch('http://localhost:3000/recipes');
+      const request = await fetch(this.REST_API);
       const recipes = await request.json();
 
       if (recipes && Array.isArray(recipes)) {
@@ -49,4 +50,15 @@ export class MainRecipesComponent {
     const [amountValue, amountUnit] = amount.split(/(\d+)/).filter(Boolean);
     return (parseInt(amountValue) * this.people) + amountUnit;
   }
+
+  /*deleteItem(name: string){
+    try {
+      const del = await fetch(this.REST_API, {
+        method: 'delete',
+
+      })
+    } catch (error) {
+      
+    }
+  }*/
 }

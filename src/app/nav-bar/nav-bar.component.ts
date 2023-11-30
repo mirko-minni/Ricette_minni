@@ -8,7 +8,7 @@ import { Output, EventEmitter } from '@angular/core';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent {
-
+  REST_API : string = 'http://localhost:3000/recipes';
   constructor(){}
   query: string = '';
   ricette : any[] = [];
@@ -19,7 +19,7 @@ export class NavBarComponent {
   }
 
   async caricaRicette(): Promise<void> {
-    const request = await fetch('http://localhost:3000/recipes');
+    const request = await fetch(this.REST_API);
     this.ricette = await request.json();
   }
 
