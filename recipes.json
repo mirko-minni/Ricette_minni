@@ -1,6 +1,7 @@
 {
   "recipes": [
     {
+      "id": 1,
       "name": "Spaghetti alla chitarra",
       "description": "Tipico abruzzese",
       "tipologia": "Salato",
@@ -21,63 +22,13 @@
       ],
       "difficulty": "Semplice",
       "time_executing": "30 min.",
-      "instructions" : "Per prima cosa create su un piano di lavoro la forma a fontana con la farina e rompetevi all'interno le uova aggiustando poi di sale, spolverandone giusto un pizzico. Con una forchetta sbattete le uova e continuate a impastare fino a ottenere un impasto liscio e omogeneo, formate quindi un panetto che avvolgerete nella pellicola trasparente e lascerete riposare per un'ora circa. Trascorso questo periodo di tempo trasferite nuovamente l'impasto sul piano di lavoro e con un mattarello stendete la pasta realizzando una sfoglia di circa 5 mm. Utilizzando la chitarra, ossia lo strumento utilizzato per dare il classico formato agli spaghetti, procedete a realizzarli disponendoli poi su una spianatoia per lasciarli asciugare. Dopo alcuni minuti di riposo gli spaghetti alla chitarra sono pronti per essere cucinati e quindi conditi con il sugo preferito: sbizzarritevi attingendo al vasto repertorio della tradizione."
+      "instructions": "Per prima cosa create su un piano di lavoro la forma a fontana con la farina e rompetevi all'interno le uova aggiustando poi di sale, spolverandone giusto un pizzico. Con una forchetta sbattete le uova e continuate a impastare fino a ottenere un impasto liscio e omogeneo, formate quindi un panetto che avvolgerete nella pellicola trasparente e lascerete riposare per un'ora circa. Trascorso questo periodo di tempo trasferite nuovamente l'impasto sul piano di lavoro e con un mattarello stendete la pasta realizzando una sfoglia di circa 5 mm. Utilizzando la chitarra, ossia lo strumento utilizzato per dare il classico formato agli spaghetti, procedete a realizzarli disponendoli poi su una spianatoia per lasciarli asciugare. Dopo alcuni minuti di riposo gli spaghetti alla chitarra sono pronti per essere cucinati e quindi conditi con il sugo preferito: sbizzarritevi attingendo al vasto repertorio della tradizione."
     },
     {
-      "name": "Lasagne alla bolognese",
-      "description": "Nel cuore dell'Emilia-Romagna",
-      "tipologia": "Salato",
-      "imagePath": "././assets/img/flipped_lasagna.jpg",
-      "ingredients": [
-        {
-          "name": "Pasta sfoglia",
-          "amount": "5 strati"
-        },
-        {
-          "name": "Ragù",
-          "amount": "60g"
-        },
-        {
-          "name": "Besciamella",
-          "amount": "40g"
-        }
-      ],
-      "difficulty": "Media",
-      "time_executing": "30 min.",
-      "instructions" : "Preparare strati alternati di pasta sfoglia, ragù e besciamella in una teglia. Cuocere in forno a 180°C per 45-60 minuti, assicurandosi che la superficie sia dorata. Lasciare raffreddare leggermente prima di servire. Godere delle deliziose lasagne alla bolognese fatte in casa."
-    },
-    {
-      "name": "Gnocchi ai formaggi",
-      "description": "Nei borghi del Castelmagno",
-      "tipologia" : "Salato",
-      "imagePath": "././assets/img/gnocchi_castelmagno.jpg",
-      "ingredients": [
-        {
-          "name": "Gnocchi",
-          "amount": "80g"
-        },
-        {
-          "name": "Castelmagno",
-          "amount": "30g"
-        },
-        {
-          "name": "Latte",
-          "amount": "20ml"
-        },
-        {
-          "name": "Burro",
-          "amount": "20g"
-        }
-      ],
-      "difficulty": "Semplice",
-      "time_executing": "25 min.",
-      "instructions" : "Per gli gnocchi al Castelmagno, come prima cosa, assicuratevi di avere gnocchi di patate di buona qualità oppure preparateli seguendo la ricetta base. In una capiente padella antiaderente raccogliete il latte in cui avrete stemperato l'amido di mais, il Castelmagno a scaglie molto sottili e il burro. Fate fondere a fiamma molto bassa mescolando spesso. Nel frattempo portate a ebollizione abbondante acqua salata in una casseruola capiente. Lessatevi gli gnocchi scolandoli con una schiumarola non appena saranno venuti a galla e uniteli al condimento preparato. Mantecate con Castelmagno grattugiato a piacere, aggiustate la consistenza con eventuale acqua di cottura, salate e pepate. Trasferite gli gnocchi al Castelmagno nei piatti da portata e servite."
-   
-    },
-    {
+      "id": 4,
       "name": "Tiramisù",
       "description": "Un dessert gustoso",
-      "tipologia" : "Dessert",
+      "tipologia": "Dessert",
       "imagePath": "././assets/img/tiramisu.jpg",
       "ingredients": [
         {
@@ -89,38 +40,9 @@
           "amount": "20pz"
         }
       ],
-       "difficulty": "Semplice",
+      "difficulty": "Semplice",
       "time_executing": "15 min.",
-      "instructions" : "Mescola mascarpone, zucchero e vaniglia. In un'altra ciotola, sbatti tuorli e zucchero. Aggiungi la crema al mascarpone. Monta a neve gli albumi e uniscili delicatamente. Inzuppa i savoiardi in caffè e stratifica con la crema. Cospargi cacao e lascia riposare in frigo. Servi freddo."
-   
-    },
-    {
-      "name": "Brut ma bun",
-      "description": "Non giudicare un libro dalla copertina",
-      "tipologia" : "Dessert",
-      "imagePath": "././assets/img/Brutti-ma-buoni.jpg",
-      "ingredients": [
-        {
-          "name": "Nocciole",
-          "amount": "60gr"
-        },
-        {
-          "name": "Albumi",
-          "amount": "50gr"
-        },
-        {
-          "name": "Zucchero",
-          "amount": "90gr"
-        },
-        {
-          "name": "Vaniglia",
-          "amount": "20gr"
-        }
-      ],
-       "difficulty": "Semplice",
-      "time_executing": "25 min.",
-      "instructions" : "Miscela noci tritate, zucchero e albume. Aggiungi farina creando un impasto. Forma piccoli dischi su una teglia. Cuoci in forno a 180°C per 15-20 minuti. Lascia raffreddare prima di servire."
-   
+      "instructions": "Mescola mascarpone, zucchero e vaniglia. In un'altra ciotola, sbatti tuorli e zucchero. Aggiungi la crema al mascarpone. Monta a neve gli albumi e uniscili delicatamente. Inzuppa i savoiardi in caffè e stratifica con la crema. Cospargi cacao e lascia riposare in frigo. Servi freddo."
     }
-]
+  ]
 }

@@ -51,14 +51,7 @@ export class MainRecipesComponent {
     return (parseInt(amountValue) * this.people) + amountUnit;
   }
 
-  /*deleteItem(name: string){
-    try {
-      const del = await fetch(this.REST_API, {
-        method: 'delete',
-
-      })
-    } catch (error) {
-      
-    }
-  }*/
+  async btnElimina(id : Number){
+    await fetch(this.REST_API + "/" + id.toString(), {method:"DELETE"});
+  }
 }

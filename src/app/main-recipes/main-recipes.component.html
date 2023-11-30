@@ -7,7 +7,7 @@
       <div class="card-body">
         <h5 class="card-title">{{item.name}}</h5>
         <p class="card-text">{{item.description}}</p>
-        <button type="button" class="btn btn-outline-success">Elimina</button>
+        <button type="button" class="btn btn-outline-success" (click)="btnElimina(item.id)">Elimina</button>
       </div>
       <ul class="list-group list-group-flush">
         <div class="accordion accordion-flush">
@@ -55,7 +55,7 @@
       <div class="card-body">
         <h5 class="card-title">{{item.name}}</h5>
         <p class="card-text">{{item.description}}</p>
-        <button type="button" class="btn btn-outline-success">Elimina</button>
+        <button type="button" class="btn btn-outline-success" (click)="btnElimina(item.id)">Elimina</button>
       </div>
       <ul class="list-group list-group-flush">
         <div class="accordion accordion-flush">
