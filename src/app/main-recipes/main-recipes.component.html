@@ -96,10 +96,9 @@
   </div>
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid d-flex align-items-center vh-20">
   <button type="button" class="btn btn-success" (click)="btnAggiungi()">Aggiungi ricetta</button>
 </div>
-
 
 <div *ngIf="showEditForm" class="container mt-5" id="add_edit_form">
   <h2>Modifica Ricetta</h2>
@@ -125,7 +124,6 @@
         </div>
       </div>
       <button type="button" class="btn btn-primary m-2" (click)="pushIngredient()">+</button>
-      <!-- Puoi aggiungere più campi per gli ingredienti se necessario -->
     </div>
 
     <div class="mb-3">
@@ -174,8 +172,8 @@
     <div class="mb-3">
       <label for="difficulty" class="form-label">Tipologia</label>
       <select class="form-select" name="tipologia" [(ngModel)]="ricettaInserita.tipologia">
-        <option value="facile">Salato</option>
-        <option value="media">Dolce</option>
+        <option value="Salato">Salato</option>
+        <option value="Dessert">Dolce</option>
       </select>
     </div>
 
@@ -190,7 +188,6 @@
         </div>
       </div>
       <button type="button" class="btn btn-primary m-2" (click)="pushIngredient_add()">+</button>
-      <!-- Puoi aggiungere più campi per gli ingredienti se necessario -->
     </div>
   
     <div class="mb-3">
@@ -213,6 +210,7 @@
     </div>
   
     <button type="submit" class="btn btn-primary" (click)="savePush()">Salva ricetta</button>
+    <button type="submit" class="btn btn-warning m-5" (click)="closeEditor()">Chiudi</button>
   </form>
 </div>
 

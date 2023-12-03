@@ -32,6 +32,9 @@ export class ListaRicetteComponent {
 
   printAmount(amount: string){
     const [amountValue, amountUnit] = amount.split(/(\d+)/).filter(Boolean);
+    if(isNaN(Number(amountValue))){
+      return 'qb';
+    }
     return (parseInt(amountValue) * this.people) + amountUnit;
   }
 }

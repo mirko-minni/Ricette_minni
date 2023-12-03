@@ -105,7 +105,8 @@ export class MainRecipesComponent {
     });
   }
   closeEditor(){
-    this.showEditForm = false;
+    if(this.showEditForm = true){ this.showEditForm = false; }
+    if(this.showAddForm = true){ this.showAddForm = false; }
   }
 
   btnAggiungi(){
@@ -130,7 +131,7 @@ export class MainRecipesComponent {
     } catch (error) {
       console.log('Errore inserimento ricetta...');
     }
-    
+    this.showAddForm = false;
   }
   pushIngredient_add(){
     this.ricettaInserita.ingredients.push({

@@ -75,6 +75,54 @@
       "time_executing": 5,
       "instructions": "Chiama qualcuno",
       "id": 5
+    },
+    {
+      "name": "Tortino cuore morbido",
+      "description": "Soffice tortino amoroso",
+      "tipologia": "Dessert",
+      "imagePath": "https://imgs.search.brave.com/U7Sxn9EY_6C0UebLPE14pPpbivSRLUHZ4Y-K-1CLfJc/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9wcmlt/b2NoZWYuaXQvd3At/Y29udGVudC91cGxv/YWRzLzIwMTkvMTEv/U0hfdG9ydGlub19j/dW9yZV9tb3JiaWRv/LTY0MHgzNTAuanBn",
+      "ingredients": [
+        {
+          "name": "Cioccolato",
+          "amount": "50g"
+        },
+        {
+          "name": "Latte",
+          "amount": "100ml"
+        },
+        {
+          "name": "Cacao",
+          "amount": "20g"
+        }
+      ],
+      "difficulty": "media",
+      "time_executing": 25,
+      "instructions": "Scaldalo",
+      "id": 6
+    },
+    {
+      "name": "Tortino cuore morbido",
+      "description": "Soffice tortino amoroso",
+      "tipologia": "media",
+      "imagePath": "https://imgs.search.brave.com/U7Sxn9EY_6C0UebLPE14pPpbivSRLUHZ4Y-K-1CLfJc/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9wcmlt/b2NoZWYuaXQvd3At/Y29udGVudC91cGxv/YWRzLzIwMTkvMTEv/U0hfdG9ydGlub19j/dW9yZV9tb3JiaWRv/LTY0MHgzNTAuanBn",
+      "ingredients": [
+        {
+          "name": "Cioccolato",
+          "amount": "50g"
+        },
+        {
+          "name": "Latte",
+          "amount": "100ml"
+        },
+        {
+          "name": "Cacao",
+          "amount": "20g"
+        }
+      ],
+      "difficulty": "media",
+      "time_executing": 25,
+      "instructions": "Scaldalo",
+      "id": 7
     }
   ]
 }

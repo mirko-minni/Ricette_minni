@@ -1,5 +1,5 @@
 <section class="mainslider container-fluid">
-    <div id="carouselExampleFade" class="carousel slide carousel-fade">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade mt-5">
         <div class="carousel-inner">
           <div *ngFor="let ricetta of ricette; let i = index" class="carousel-item" [ngClass]="{'active': i === 0}">
             <img src="{{ricetta.imagePath}}" class="d-block w-100 imgs" alt="...">
