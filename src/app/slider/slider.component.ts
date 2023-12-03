@@ -6,11 +6,15 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./slider.component.css']
 })
 export class SliderComponent {
-  img1: string = "././assets/img/spaghetti_chitarra.jpg";
-  img2: string = "././assets/img/gnocchi_castelmagno.jpg";
-  img3: string = "././assets/img/flipped_lasagna.jpg";
-  img4: string = "././assets/img/tiramisu.jpg";
-  img5: string = "././assets/img/Brutti-ma-buoni.jpg";
 
-  
+  REST_API : string = 'http://localhost:3000/recipes';
+  ricette : any[] = [];
+  ngOnInit(){
+    this.caricaRicette()
+  }
+
+  async caricaRicette(): Promise<void> {
+    const request = await fetch(this.REST_API);
+    this.ricette = await request.json();
+  }
 }

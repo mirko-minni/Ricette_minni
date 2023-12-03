@@ -18,10 +18,14 @@
         {
           "name": "Acqua",
           "amount": "50ml"
+        },
+        {
+          "name": "Sale",
+          "amount": "qb"
         }
       ],
-      "difficulty": "Semplice",
-      "time_executing": "30 min.",
+      "difficulty": "media",
+      "time_executing": 28,
       "instructions": "Per prima cosa create su un piano di lavoro la forma a fontana con la farina e rompetevi all'interno le uova aggiustando poi di sale, spolverandone giusto un pizzico. Con una forchetta sbattete le uova e continuate a impastare fino a ottenere un impasto liscio e omogeneo, formate quindi un panetto che avvolgerete nella pellicola trasparente e lascerete riposare per un'ora circa. Trascorso questo periodo di tempo trasferite nuovamente l'impasto sul piano di lavoro e con un mattarello stendete la pasta realizzando una sfoglia di circa 5 mm. Utilizzando la chitarra, ossia lo strumento utilizzato per dare il classico formato agli spaghetti, procedete a realizzarli disponendoli poi su una spianatoia per lasciarli asciugare. Dopo alcuni minuti di riposo gli spaghetti alla chitarra sono pronti per essere cucinati e quindi conditi con il sugo preferito: sbizzarritevi attingendo al vasto repertorio della tradizione."
     },
     {
@@ -43,6 +47,34 @@
       "difficulty": "Semplice",
       "time_executing": "15 min.",
       "instructions": "Mescola mascarpone, zucchero e vaniglia. In un'altra ciotola, sbatti tuorli e zucchero. Aggiungi la crema al mascarpone. Monta a neve gli albumi e uniscili delicatamente. Inzuppa i savoiardi in caffè e stratifica con la crema. Cospargi cacao e lascia riposare in frigo. Servi freddo."
+    },
+    {
+      "name": "Hamburger ",
+      "description": "Texas ranger",
+      "tipologia": "Salato",
+      "imagePath": "https://imgs.search.brave.com/nwxwfNSnsNE0H2ABaO4reDJkiXV9H5wqPivDUce4CRI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNjE3/MzY0NTU0L3Bob3Rv/L2hhbWJ1cmdlci13/aXRoLWZyaWVzLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz10/OGZNSVJld05GUlU3/WVNNTldJeDJheG95/Wk5qc2gwY3hITTR2/WU1BTGY4PQ",
+      "ingredients": [
+        {
+          "name": "Pane",
+          "amount": "2pz"
+        },
+        {
+          "name": "Hamburger",
+          "amount": "2pz"
+        },
+        {
+          "name": "Formaggio",
+          "amount": "qb"
+        },
+        {
+          "name": "Insalata",
+          "amount": "40g"
+        }
+      ],
+      "difficulty": "facile",
+      "time_executing": 5,
+      "instructions": "Chiama qualcuno",
+      "id": 5
     }
   ]
 }

@@ -7,7 +7,8 @@
       <div class="card-body">
         <h5 class="card-title">{{item.name}}</h5>
         <p class="card-text">{{item.description}}</p>
-        <button type="button" class="btn btn-outline-success" (click)="btnElimina(item.id)">Elimina</button>
+        <button type="button" class="btn btn-outline-danger m-5" (click)="btnElimina(item.id)">Elimina</button>
+        <button type="button" class="btn btn-outline-primary m-5" (click)="btnModifica(item)">Modifica</button>
       </div>
       <ul class="list-group list-group-flush">
         <div class="accordion accordion-flush">
@@ -55,7 +56,8 @@
       <div class="card-body">
         <h5 class="card-title">{{item.name}}</h5>
         <p class="card-text">{{item.description}}</p>
-        <button type="button" class="btn btn-outline-success" (click)="btnElimina(item.id)">Elimina</button>
+        <button type="button" class="btn btn-outline-danger m-5" (click)="btnElimina(item.id)">Elimina</button>
+        <button type="button" class="btn btn-outline-primary m-5" (click)="btnModifica(item)" href="#add_edit_form">Modifica</button>
       </div>
       <ul class="list-group list-group-flush">
         <div class="accordion accordion-flush">
@@ -93,3 +95,124 @@
     </div>
   </div>
 </div>
+
+<div class="container-fluid">
+  <button type="button" class="btn btn-success" (click)="btnAggiungi()">Aggiungi ricetta</button>
+</div>
+
+
+<div *ngIf="showEditForm" class="container mt-5" id="add_edit_form">
+  <h2>Modifica Ricetta</h2>
+  <form>
+    <div class="mb-3">
+      <label for="imagePath" class="form-label">Path dell'immagine</label>
+      <input type="text" class="form-control" id="imagePath" name="pathImmagine" [(ngModel)]="ricettaModificata.imagePath">
+    </div>
+
+    <div class="mb-3">
+      <label for="recipeName" class="form-label">Nome della ricetta</label>
+      <input type="text" class="form-control" id="recipeName" name="nomeRicetta" [(ngModel)]="ricettaModificata.name">
+    </div>
+
+    <div class="mb-3">
+      <label for="ingredients" class="form-label">Ingredienti</label>
+      <div class="row m-3" *ngFor="let ingredient of ricettaModificata.ingredients">
+        <div class="col">
+          <input type="text" class="form-control" name="nomeIngrediente" [value]="ingredient.name" >
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" name="quantita" [value]="ingredient.amount">
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary m-2" (click)="pushIngredient()">+</button>
+      <!-- Puoi aggiungere più campi per gli ingredienti se necessario -->
+    </div>
+
+    <div class="mb-3">
+      <label for="instructions" class="form-label">Istruzioni</label>
+      <textarea class="form-control" id="instructions" name="istruzioni" rows="4" [(ngModel)]="ricettaModificata.instructions"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="difficulty" class="form-label">Difficoltà</label>
+      <select class="form-select" id="difficulty" name="difficolta" [(ngModel)]="ricettaModificata.difficulty">
+        <option value="facile">Facile</option>
+        <option value="media">Media</option>
+        <option value="difficile">Difficile</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="cookingTime" class="form-label">Tempo di esecuzione (minuti)</label>
+      <input type="number" class="form-control" id="cookingTime" name="tempo" [(ngModel)]="ricettaModificata.time_executing">
+    </div>
+
+    <button type="submit" class="btn btn-primary m-5" (click)="saveEdit(ricettaModificata)">Salva modifiche</button>
+    <button type="submit" class="btn btn-warning m-5" (click)="closeEditor()">Chiudi</button>
+
+  </form>
+</div>
+
+<div *ngIf="showAddForm" class="container mt-5" id="add_edit_form">
+  <h2>Aggiungi Ricetta</h2>
+  <form>
+    <div class="mb-3">
+      <label for="recipeName" class="form-label">Nome della ricetta</label>
+      <input type="text" class="form-control" id="recipeName" name="nomeRicetta" [(ngModel)]="ricettaInserita.name">
+    </div>
+
+    <div class="mb-3">
+      <label for="imagePath" class="form-label">Descrizione</label>
+      <input type="text" class="form-control" id="imagePath" name="description" [(ngModel)]="ricettaInserita.description">
+    </div>
+
+    <div class="mb-3">
+      <label for="imagePath" class="form-label">Path dell'immagine</label>
+      <input type="text" class="form-control" id="imagePath" name="imagePath" [(ngModel)]="ricettaInserita.imagePath">
+    </div>
+
+    <div class="mb-3">
+      <label for="difficulty" class="form-label">Tipologia</label>
+      <select class="form-select" name="tipologia" [(ngModel)]="ricettaInserita.tipologia">
+        <option value="facile">Salato</option>
+        <option value="media">Dolce</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="ingredients" class="form-label">Ingredienti</label>
+      <div class="row mb-3" *ngFor="let ingredient of ricettaInserita.ingredients; let i = index">
+        <div class="col">
+          <input type="text" class="form-control" name="nomeIngrendiente" [(ngModel)]="ricettaInserita.ingredients[i].name">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" name="quantita" [(ngModel)]="ricettaInserita.ingredients[i].amount">
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary m-2" (click)="pushIngredient_add()">+</button>
+      <!-- Puoi aggiungere più campi per gli ingredienti se necessario -->
+    </div>
+  
+    <div class="mb-3">
+      <label for="instructions" class="form-label">Istruzioni</label>
+      <textarea class="form-control" id="instructions" rows="4" name="istruzioni" [(ngModel)]="ricettaInserita.instructions"></textarea>
+    </div>
+  
+    <div class="mb-3">
+      <label for="difficulty" class="form-label">Difficoltà</label>
+      <select class="form-select" name="difficolta" [(ngModel)]="ricettaInserita.difficulty">
+        <option value="facile">Facile</option>
+        <option value="media">Media</option>
+        <option value="difficile">Difficile</option>
+      </select>
+    </div>
+  
+    <div class="mb-3">
+      <label for="cookingTime" class="form-label">Tempo di esecuzione (minuti)</label>
+      <input type="number" class="form-control" id="cookingTime" name="tempo" [(ngModel)]="ricettaInserita.time_executing">
+    </div>
+  
+    <button type="submit" class="btn btn-primary" (click)="savePush()">Salva ricetta</button>
+  </form>
+</div>
+

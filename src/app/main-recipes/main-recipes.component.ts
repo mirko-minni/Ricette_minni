@@ -13,6 +13,21 @@ export class MainRecipesComponent {
   people = 1;
   rangeValue: number = 0;
   REST_API : string = 'http://localhost:3000/recipes';
+  showEditForm : boolean = false;
+  showMessageForm : boolean = false;
+  showAddForm : boolean = false;
+  ricettaModificata !: Recipe;
+  ricettaInserita : any = {
+    name: '',
+    description: '',
+    tipologia: '',
+    imagePath: '',
+    ingredients: [{name : '', amount: ''}],
+    difficulty: '',
+    time_executing: '',
+    instructions: ''
+  };
+  message : string = '';
   constructor(){
 
     const json: any = [];
@@ -47,11 +62,80 @@ export class MainRecipesComponent {
   }
 
   printAmount(amount: string){
-    const [amountValue, amountUnit] = amount.split(/(\d+)/).filter(Boolean);
+    let [amountValue, amountUnit] = amount.split(/(\d+)/).filter(Boolean);
+    if(isNaN(Number(amountValue))){
+      return 'qb';
+    }
     return (parseInt(amountValue) * this.people) + amountUnit;
   }
 
   async btnElimina(id : Number){
-    await fetch(this.REST_API + "/" + id.toString(), {method:"DELETE"});
+    try {
+      await fetch(this.REST_API + "/" + id.toString(), {method:"DELETE"});
+    } catch (error) {
+      console.log('Qualcosa è andato storto, riprova tra poco...')
+    }
+  }
+
+  btnModifica(ricetta : Recipe){
+    this.showEditForm = true;
+    this.ricettaModificata = { ...ricetta};
+    console.log(this.ricettaModificata.ingredients);
+  }
+  async saveEdit(ricettaModificata : Recipe){
+    const body = JSON.stringify(ricettaModificata);
+    try {
+      await fetch(this.REST_API + '/' + ricettaModificata.id , {
+        method: "PUT",
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: body,
+      });
+    } catch (error) {
+      console.log('Impossibile eseguire la tua richiesta, ci dispiace. Potrebbe essere un errore temporaneo, riprova tra poco...')
+    }
+    this.showEditForm = false;
+  }
+
+  pushIngredient(){
+    this.ricettaModificata.ingredients.push({
+      name: '',
+      amount: '',
+    });
+  }
+  closeEditor(){
+    this.showEditForm = false;
+  }
+
+  btnAggiungi(){
+    if(this.showEditForm = true){
+      this.showEditForm = false;
+      this.showAddForm = true;
+    }else{ this.showAddForm = true };
+  }
+
+  ricette : Recipe[] = [];
+  async caricaRicette(): Promise<void> {
+    const request = await fetch(this.REST_API);
+    this.ricette = await request.json();
+  }
+  async savePush(){
+    try {
+      await fetch(this.REST_API, {
+      method: 'POST',
+      headers:{ 'Content-Type': 'application/json',},
+      body: JSON.stringify(this.ricettaInserita),
+    });
+    } catch (error) {
+      console.log('Errore inserimento ricetta...');
+    }
+    
+  }
+  pushIngredient_add(){
+    this.ricettaInserita.ingredients.push({
+      name: '',
+      amount: '',
+    });
   }
 }
