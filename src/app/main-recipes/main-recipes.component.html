@@ -72,7 +72,7 @@
                 <input type="range" min="1" max="10" value="{{people}}" step="0.2" class="PB-range-slider" id="myRange" (change)="peopleChange($event)">
                 <p class="PB-range-slidervalue">{{people}} Pers.</p>
                 </div>
-              
+      
               <div class="accordion-body" *ngFor="let ingredient of item.ingredients">{{ingredient.name}} - {{printAmount((ingredient.amount).toString())}}</div>
             </div>
           </div>
@@ -104,13 +104,13 @@
   <h2>Modifica Ricetta</h2>
   <form>
     <div class="mb-3">
-      <label for="imagePath" class="form-label">Path dell'immagine</label>
-      <input type="text" class="form-control" id="imagePath" name="pathImmagine" [(ngModel)]="ricettaModificata.imagePath">
+      <label for="recipeName" class="form-label">Nome della ricetta</label>
+      <input type="text" class="form-control" id="recipeName" name="nomeRicetta" [(ngModel)]="ricettaModificata.name">
     </div>
 
     <div class="mb-3">
-      <label for="recipeName" class="form-label">Nome della ricetta</label>
-      <input type="text" class="form-control" id="recipeName" name="nomeRicetta" [(ngModel)]="ricettaModificata.name">
+      <label for="imagePath" class="form-label">Path dell'immagine</label>
+      <input type="text" class="form-control" id="imagePath" name="pathImmagine" [(ngModel)]="ricettaModificata.imagePath">
     </div>
 
     <div class="mb-3">
