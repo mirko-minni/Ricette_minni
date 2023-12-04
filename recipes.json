@@ -30,7 +30,7 @@
     },
     {
       "id": 4,
-      "name": "Tiramisù",
+      "name": "tiramigiù",
       "description": "Un dessert gustoso",
       "tipologia": "Dessert",
       "imagePath": "././assets/img/tiramisu.jpg",
@@ -44,8 +44,8 @@
           "amount": "20pz"
         }
       ],
-      "difficulty": "Semplice",
-      "time_executing": "15 min.",
+      "difficulty": "difficile",
+      "time_executing": 60,
       "instructions": "Mescola mascarpone, zucchero e vaniglia. In un'altra ciotola, sbatti tuorli e zucchero. Aggiungi la crema al mascarpone. Monta a neve gli albumi e uniscili delicatamente. Inzuppa i savoiardi in caffè e stratifica con la crema. Cospargi cacao e lascia riposare in frigo. Servi freddo."
     },
     {

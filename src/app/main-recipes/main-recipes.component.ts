@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { Recipe } from '../models/receipe';
 import { Ingredient } from '../models/receipe';
-
 @Component({
   selector: 'app-main-recipes',
   templateUrl: './main-recipes.component.html',
   styleUrls: ['./main-recipes.component.css']
 })
+
 export class MainRecipesComponent {
   ricetteDolci: Recipe[] = [];
   ricetteSalati: Recipe[] = [];
@@ -17,6 +17,7 @@ export class MainRecipesComponent {
   showMessageForm : boolean = false;
   showAddForm : boolean = false;
   ricettaModificata !: Recipe;
+  
   ricettaInserita : any = {
     name: '',
     description: '',
